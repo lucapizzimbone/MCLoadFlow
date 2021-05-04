@@ -58,6 +58,10 @@ MAX_QUANTILE = 0.95 # filter for selection of max loaded elements or max voltage
 MIN_QUANTILE = 0.05 # filter for selection of max loaded elements or max voltage based on quantile values
 PLOT_FIGURES = True # if False, no plots are shown and only pdf files will be saved in the same PATH of the csv input files.
 
+# How to use the scripts
+1. Copy all the scripts in the same directory and create a subfolder for the measurement data (input) and one for the output results (output). You may use any name. The path of these folders shall be specified in the ConfigFile and DataVisualization, as described in the previous sections.
+2. Hence use the Jupyter notebook SyntheticDataGeneration and follow the instructions given in the notebook itself, to load measurement *.csv files, visulaize the PDF diagrams and generate a sufficient number of Synthetic samples.
+3. PowerFactory model shall be also ready for the MC simulations, as described in the section 3. 
+4. The next step is to setup the ConfigFile, as described in section 1 and run the script. The script will automatically recall the functions in the MCLoadFlow component. PowerFactory shall be closed in this time, as it works in GUI-less mode. A progress bar will indicate the time elapsed from the beginning of the simulation and the remaining time. After the completion of the simulation, the files will be saved in the selected directory.
+5. Finally, run the DataVisualization script to generate plots and relevant *.pdf files.
 
-
-- 
