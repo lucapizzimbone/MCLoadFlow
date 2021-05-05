@@ -33,7 +33,7 @@ with open(RESULT_PATH + r'\res_prob_lf_bus.csv', 'w', newline='') as csvfile:
      #write file rows (voltages)
      csvwriter.writerow(voltages)
 
-with open(RESULT_PATH + r'\res_prob_lf_lne.csv', 'w', newline='') as csvfile:
+with open(RESULT_PATH + r'\res_prob_lf_lne_loading.csv', 'w', newline='') as csvfile:
 #iterate over mcldf object to get line loading
 
  for row_index, lines in enumerate(mcldf[1]):
@@ -57,7 +57,7 @@ with open(RESULT_PATH + r'\res_prob_trf.csv', 'w', newline='') as csvfile:
      #write file rows (transformers)
      csvwriter.writerow(trafo)
 
-with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_p.csv', 'w', newline='') as csvfile:
+with open(RESULT_PATH + r'\res_prob_lf_load_power.csv', 'w', newline='') as csvfile:
 #iterate over mcldf object to get pq random values
  for row_index, p in enumerate(mcldf[3]):
      if row_index == 0:
@@ -67,7 +67,7 @@ with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_p.csv', 'w', newline='') as c
      csvwriter.writerow(p)
 
 # power losses (total of the grid)
-with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_power_losses.csv', 'w', newline='') as csvfile:
+with open(RESULT_PATH + r'\res_prob_lf_power_losses.csv', 'w', newline='') as csvfile:
 #iterate over mcldf object to get pq random values
 
  for row_index, pl in enumerate(mcldf[4]):
@@ -78,7 +78,7 @@ with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_power_losses.csv', 'w', newli
      csvwriter.writerow(pl)
 
 # power vre (each)
-with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_power_vre_wind.csv', 'w', newline='') as csvfile:
+with open(RESULT_PATH + r'\res_prob_lf_power_vre_wind.csv', 'w', newline='') as csvfile:
 #iterate over mcldf object to get wind power output
 
  for row_index, rewind in enumerate(mcldf[5]):
@@ -88,7 +88,7 @@ with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_power_vre_wind.csv', 'w', new
      # write file rows (reactive power random numbers)
      csvwriter.writerow(rewind)
 
-with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_power_vre_pv.csv', 'w', newline='') as csvfile:
+with open(RESULT_PATH + r'\res_prob_lf_power_vre_pv.csv', 'w', newline='') as csvfile:
 #iterate over mcldf object to get pv power output
 
  for row_index, repv in enumerate(mcldf[6]):
@@ -98,7 +98,7 @@ with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_power_vre_pv.csv', 'w', newli
      # write file rows (reactive power random numbers)
      csvwriter.writerow(repv)
 
-with open(RESULT_PATH + r'\res_prob_lf_1000_std0.1_lne_pw.csv', 'w', newline='') as csvfile:
+with open(RESULT_PATH + r'\res_prob_lf_lne_power.csv', 'w', newline='') as csvfile:
 #iterate over mcldf object to get line loading
 
  for row_index, lines in enumerate(mcldf[7]):
