@@ -36,13 +36,19 @@ N_SAMPLES = 8760 # here you can enter the number of samples you would like to an
 
 STD_DEV = 0.09 # if a normal distribution function is used for load stochastic model, here the standard deviation can be entered. The software will consider this in the preapration of the PDF, using the actual load values as set in PowerFactory and the standard deviation entered here.
 
-sys.path.append(r"D:\...\path within PowerFactory directory to find \Python\x.x) # here the path for PowerFactory.pyd file shall be given 
+
 
 ## 2. SampleGen
 This component is constituted by a set of Jupiter Notebook files for the selection of the best fitting PDF, based on input samples (i.e. field measureemnts) and the generation of synthetic data, based on the calcuated PDF. The component is generating the output in *.csv format and in diagrams.
 
 ## 3. SimComp
-This component is the interface for PowerFactory. The PowerFactory file shall have few set-ups before it can be used by the scripts. These are the set-ups:
+This component is the interface for PowerFactory. 
+At first, it is necessary to set the path where PowerFactory can find the PowerFactory.pyd file (usually to be found in a subfolder of the PowerFactory installation directory)
+
+sys.path.append(r"D:\...\path within PowerFactory directory to find \Python\x.x) # here the path for PowerFactory.pyd file shall be given 
+
+Hence, the next step is to set-up the PowerFactory project. These are the set-ups:
+
 - for the bus or terminals to be monitored by the Python scripts, the label 'obs' shall be typed in the description field (Attribute: desc) of the bus or terminal elements in PowerFactory, as per following figure:
 
 ![image](https://user-images.githubusercontent.com/82202509/117000552-868def80-ace1-11eb-8b33-f540905d3fda.png)
