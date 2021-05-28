@@ -82,4 +82,4 @@ PLOT_FIGURES = True # if False, no plots are shown and only pdf files will be sa
 4. The next step is to setup the ConfigFile, as described in section 1 and run the script. The script will automatically recall the functions in the MCLoadFlow component. PowerFactory shall be closed in this time, as it works in GUI-less mode. A progress bar will indicate the time elapsed from the beginning of the simulation and the remaining time. After the completion of the simulation, the files will be saved in the selected directory.
 5. Finally, run the DataVisualization script to generate plots and relevant *.pdf files.
 
-End of the Read Me File
+End of the ReadMe File
