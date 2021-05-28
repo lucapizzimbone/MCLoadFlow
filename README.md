@@ -5,6 +5,9 @@ This file provides a description and the instructions to use the MCLoadFLow pack
 - SimComp
 - DataVis
 
+The above components are illustrated in the following UML diagram:
+
+![image](https://user-images.githubusercontent.com/82202509/119944564-b785db00-bf94-11eb-969b-3138f12a8c7f.png)
 
 ## Abbreviations
 CDF = Cumulative Distribution Function
